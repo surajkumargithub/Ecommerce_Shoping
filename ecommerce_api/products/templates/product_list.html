@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product List</title>
+</head>
+<body style="color:blue; background-color:yellow">
+	<h1>Product List</h1>
+	<ul>
+	{% for product in products %}
+		<li>{{ product.name }} <br>
+             {{ product.price }}<br>
+             {{ product.description }}<br>
+             {{ product.created_at }}<br>
+             {{ product.updated_at }}<br>
+        </li><br>
+	{% empty %}
+		<p>No products found.</p>
+	{% endfor %}
+	</ul>
+</body>
+</html>
